@@ -7,18 +7,29 @@ const Heading = styled.h1`
   font-size: 2rem;
 `;
 
+const color = 'white';
+
 const Button = styled.button`
   padding: 5px 10px;
   border-radius: 4px;
-  color: white;
+  color: ${color};
   font-size: 2rem;
   border: none;
   background: ${({ type }) => type === 'cancel' ? 'tomato' : 'indigo'}
 `;
 
+const AppWrapper = styled.div`
+	header {
+		background: teal;
+		&:hover {
+			background: red;
+		}
+	}
+`;
+
 function App() {
   return (
-		<div className="App">
+		<AppWrapper>
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<Heading>
@@ -35,7 +46,7 @@ function App() {
 					Learn React
 				</a>
 			</header>
-		</div>
+		</AppWrapper>
 	);
 }
 
